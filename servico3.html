@@ -201,113 +201,116 @@
 
                 <div class="modal-body">
 
-                    <form>
+                    <form id="formOrcamento">
 
+                        <!-- Campo escondido que informa ao back-end qual serviço foi escolhido -->
+                        <input type="hidden" name="servico" value="Acompanhamento Nutricional">
 
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_nome">
                                 Nome
                             </label>
-
                             <input
                                 type="text"
-                                class="form-control">
-
+                                id="orc_nome"
+                                name="nome"
+                                class="form-control"
+                                maxlength="100"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_email">
                                 E-mail
                             </label>
-
                             <input
                                 type="email"
-                                class="form-control">
-
+                                id="orc_email"
+                                name="email"
+                                class="form-control"
+                                maxlength="100"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_telefone">
                                 Telefone
                             </label>
-
                             <input
                                 type="tel"
-                                class="form-control">
-
+                                id="orc_telefone"
+                                name="telefone"
+                                class="form-control"
+                                maxlength="20"
+                                placeholder="(49) 99999-9999"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_endereco">
                                 Endereço
                             </label>
-
                             <input
                                 type="text"
-                                class="form-control">
-
+                                id="orc_endereco"
+                                name="endereco"
+                                class="form-control"
+                                maxlength="150"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_cidade">
                                 Cidade
                             </label>
-
                             <input
                                 type="text"
-                                class="form-control">
-
+                                id="orc_cidade"
+                                name="cidade"
+                                class="form-control"
+                                maxlength="80"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_uf">
                                 UF
                             </label>
-
                             <input
                                 type="text"
-                                class="form-control">
-
+                                id="orc_uf"
+                                name="uf"
+                                class="form-control"
+                                maxlength="2"
+                                minlength="2"
+                                placeholder="SC"
+                                required>
                         </div>
 
-
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_data_desejada">
                                 Data desejada
                             </label>
-
                             <input
                                 type="date"
-                                class="form-control">
-
+                                id="orc_data_desejada"
+                                name="data_desejada"
+                                class="form-control"
+                                required>
                         </div>
-
 
                         <div class="mb-3">
-
-                            <label class="form-label">
+                            <label class="form-label" for="orc_observacoes">
                                 Observações
                             </label>
-
                             <textarea
+                                id="orc_observacoes"
+                                name="observacoes"
                                 class="form-control"
-                                rows="4">
-                            </textarea>
-
+                                rows="4"></textarea>
                         </div>
 
+                        <div id="mensagemOrcamento"></div>
 
                     </form>
 
@@ -327,11 +330,10 @@
 
 
                     <button
-                        type="button"
+                        type="submit"
+                        form="formOrcamento"
                         class="btn btn-primary">
-
                         Enviar
-
                     </button>
 
                 </div>
@@ -356,6 +358,8 @@
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
+
+    <script src="js/script.js"></script>
 
 
 </body>
